@@ -11,3 +11,7 @@ It focuses on building responsive, modern layouts using only **HTML5** and **CSS
 
 ### 🎯 Purpose  
 The main goal of this project is to strengthen my skills in **CSS Grid** and layout design, creating a solid foundation for building scalable and responsive web applications.  
+
+### 🔍 Preview  
+
+![Grid Masterclass Preview](Assets/screenshot.PNG)
