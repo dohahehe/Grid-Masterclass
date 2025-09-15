@@ -1,0 +1,418 @@
+:root{
+    font-size: 22px;
+    --default-font: "Open Sans", sans-serif;;
+    --secondary-font: "Arvo", serif;
+    --tertiary-font: "Montserrat", sans-serif;
+    color: #333;
+}
+/*       GENERAL      */
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+    line-height: 26px;
+}
+h1, h2, h3{
+    font-family: var(--secondary-font);
+}
+h4, h5, h6{
+    text-transform: uppercase;
+    font-family: var(--tertiary-font);
+}
+p{
+    font-family: var(--default-font);
+}
+picture, img{
+    display: inline-block;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.main-grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 25%;
+    grid-template-rows: 1fr 1fr 1fr 0.5fr; 
+    gap: 0px 0px; 
+    -webkit-align-content: start;
+    -ms-flex-line-pack: start;
+    align-content: start;
+    grid-template-areas: 
+    "iphone iphone labs labs"
+    "keyboard imac imac icloud"
+    "game ux ux icloud"
+    "twitter experience vision vision"; 
+}
+/*         1 IPHONE     */
+.iphone{
+    background-color: white;
+    grid-area: iphone; 
+    display: flex;
+    padding-right: 4%;
+    padding-left: 4%;
+    justify-content: space-around;
+    align-items: center;
+}
+.iphone-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 32%;
+    gap: .2rem;
+}
+.iphone-content h4,
+.chemical-labs h4,
+.imac-1 h4{
+    color: #9fa3a7;
+    font-size: .6rem;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.iphone-content h3,
+.imac .imac-1 h3,
+.games h3,
+.twitter .circle-2 h3,
+.experience h3,
+.vision h3{
+    font-size: 1.06rem;
+    line-height: 32px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.iphone-content p,
+.imac .imac-2 p{
+    font-size: .7rem;
+    line-height: 32px;
+    font-weight: 400;
+    color: #9fa3a7;
+}
+.iphone img{
+    width: 280px;
+    margin-top: 40px;
+    align-self: flex-end;
+}
+/*         2 LABS     */
+.chemical-labs{
+    background-color: #f7f8f9;
+    grid-area: labs;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 96px 0;
+    box-sizing: content-box;
+}
+.chemical-labs h1{
+    font-size: 2.4rem;
+    line-height: 60px;
+    font-weight: 400;
+    max-width: 550px;
+}
+.chemical-labs a{
+    color: #27b9c2;
+    font-family: var(--tertiary-font);
+    font-size: .7rem;
+}
+/*         3 KEYBOARD     */
+.keyboard{
+    background-color: #f05638;
+    grid-area: keyboard; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+}
+.keyboard img{
+    width: 350px;
+}
+.keyboard h3,
+.ux h3{
+    max-width: 230px;
+    margin-bottom: 0px;
+    color: #fffbfb;
+    line-height: 40px;
+}
+.keyboard a,
+.games a{
+    color: #ffc80a;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--default-font);
+}
+/*         4 IMAC     */
+.imac{
+    background-color: white;
+    grid-area: imac;
+    display: flex;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 70px;
+    justify-content: space-around;
+    overflow: hidden;
+}
+.imac .imac-1{
+    max-width: 180px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.imac .imac-1 img{
+    position: relative;
+    left: -175%;
+    width: 270%;
+    max-width: none;
+    margin-top: 20px;
+}
+.imac .imac-2{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+.imac .imac-2 a{
+    margin-top: 20px;
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #27b9c2;
+    font-family: var(--default-font);
+}
+/*         5 ICLOUD     */
+.icloud{
+    background-color: #8f76bc;
+    grid-area: icloud;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 30px 5% 70px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.icloud .circle{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #8166b0;
+}
+.icloud .circle .popular{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 13px 4px 15px;
+    border-radius: 60px;
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: .5rem;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    font-family: var(--default-font);
+}
+.icloud .circle .popular i{
+    color: #ffc80a;
+    font-size: .6rem;
+}
+.icloud .circle img{
+    width: 250px;
+    position: relative;
+    left: -8px;
+    margin-top: 20px;
+}
+.icloud .circle h3{
+    font-family: var(--tertiary-font);
+    font-size: .6rem;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.icloud .icloud-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.icloud .icloud-content h2{
+    font-size: 1.7rem;
+    margin-top: 20px;
+    line-height: 36px;
+}
+.icloud .icloud-content p{
+    width: 80%;
+    max-width: 290px;
+    font-size: .7rem;
+    line-height: 30px;
+}
+.icloud .icloud-content a{
+    padding: 16px 30px;
+    border-radius: 50px;
+    background-color: #ffc80a;
+    color: #000;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    font-family: var(--default-font);
+    text-decoration: none;
+}
+/*         6 GAMES     */
+.games{
+    background-color: #f7f8f9;
+    grid-area: game;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.games img{
+    width: 250px;
+    position: relative;
+    left: -7%;
+}
+.games h3{
+    width: 55%;
+}
+.games a{
+    color: #27b9c2;
+}
+
+/*         7 UX     */
+
+.ux{
+    background-color: #93b6b7;
+    color: white;
+    grid-area: ux;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-image: url(../Assets/ux.png);
+    background-position: 50% 100%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    position: relative;
+}
+.ux .bc,
+.experience .popular-2{
+    background-color: #fa684f;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: .45rem;
+    font-family: var(--tertiary-font);
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.ux h3{
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 30px 0;
+}
+.ux img{
+    width: 90%;
+    position: relative;
+    left: -7%;
+}
+
+/*         8 TWITTER     */
+
+.twitter{
+    background-color: #38d5f4;
+    color: white;
+    grid-area: twitter;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.twitter .circle-2{
+    width: 240px;
+    height: 240px;
+    padding-right: 34px;
+    padding-left: 34px;
+    border-radius: 50%;
+    background-color: #35cfed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.twitter .circle-2 img{
+    width: 45px;
+}
+
+/*         9 EXPERIENCE     */
+
+.experience{
+    background-color: white;
+    grid-area: experience; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+.experience .popular-2{
+    position: static;
+    background-color: #7bc424;
+    color: #fff;
+}
+.experience h3{
+    width: 70%;
+}
+
+
+/*         10 VISION     */
+
+.vision{
+    background-color: #2c2c2c;
+    color: white;
+    grid-area: vision;
+    display: flex;
+    padding-right: 5%;
+    padding-left: 5%;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+.vision img{
+    width: 280px;
+    position: relative;
+    left: -15%;
+}
+.vision h3{
+    width: 32%;
+}

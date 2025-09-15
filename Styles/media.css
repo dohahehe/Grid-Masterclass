@@ -1,0 +1,94 @@
+@media screen and (max-width: 991px) {
+    .main-grid{
+        grid-template-columns: 1fr 1fr 1fr 25%;
+        grid-template-rows: auto 1fr 1fr 1fr auto auto auto auto;
+        grid-template-areas: 
+        "labs labs labs labs"
+        "iphone iphone iphone iphone"
+        "keyboard keyboard game game"
+        "imac imac imac imac"
+        "twitter twitter icloud icloud"
+        "ux ux icloud icloud"
+        "experience experience experience experience"
+        "vision vision vision vision";
+    }
+    .experience,
+    .games {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .chemical-labs{
+        padding: 45px 0;
+    }
+    .chemical-labs h1{
+        font-size: 1.6rem;
+        line-height: 1.4em;
+    }
+}
+    
+@media (max-width: 700px) {
+    .main-grid {
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-template-areas: 
+        "labs labs labs labs"
+        "iphone iphone iphone iphone"
+        "keyboard keyboard keyboard keyboard"
+        "game game game game"
+        "imac imac imac imac"
+        "twitter twitter twitter twitter"
+        "ux ux ux ux"
+        "icloud icloud icloud icloud"
+        "experience experience experience experience"
+        "vision vision vision vision";
+    }
+    .chemical-labs h1{
+        font-size: 1.2rem;
+        line-height: 1.4em;
+    }
+    .iphone{
+        padding-top: 40px;
+        flex-direction: column;
+    }
+    .iphone .iphone-content{
+        width: 90%;
+    }
+    .iphone img{
+        position: relative;
+        left: -4%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .keyboard{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .imac{
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+    .imac .imac-1{
+        width: 100%;
+        max-width: none;
+        margin-bottom: 35px;
+    }
+    .imac .imac-1 img{
+        left: -115%;
+        width: 200%;
+        margin-top: 40px;
+    }
+    .imac .imac-2{
+        width: 100%;
+    }
+    .vision{
+        flex-direction: column;
+    }
+    .vision img{
+        margin-bottom: -7%;
+    }
+    .vision h3{
+        width: 100%;
+        text-align: center;
+    }
+}
